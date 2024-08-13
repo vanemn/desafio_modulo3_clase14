@@ -7,6 +7,19 @@ precios = {
     "Escritorio": 135000,
     "Tarjeta de video": 1500000
 }
+
+def filtrado_por_precio(precios, umbral, condicion):
+    if condicion == "mayor":
+        return {producto: precio for producto, precio in precios.items() if precio > umbral}
+            
+    elif condicion == "menor":  
+        return {producto: precio for producto, precio in precios.items() if precio < umbral}  
+        
+    else:
+        return "Lo sentimos, no es una operación válida"
+
+
+
 if len(sys.argv) < 2 or len(sys.argv) > 3: 
     print("Debes especificar un umbral y opcionalmente una condición.")
 else:
