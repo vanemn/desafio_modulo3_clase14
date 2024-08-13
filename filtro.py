@@ -14,3 +14,5 @@ else:
         umbral =int(sys.argv[1])
     except ValueError:
         print("El umbral debe ser número")
+    else:
+        condicion = "mayor" if len(sys.argv) == 2 else sys.argv[2].lower()
